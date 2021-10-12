@@ -99,7 +99,7 @@ $app->bind(\Illuminate\Queue\QueueManager::class, function ($app) {
 });
 
 $app->register(Imtigger\LaravelJobStatus\LaravelJobStatusServiceProvider::class);
-$app->register(Imtigger\LaravelJobStatus\LaravelJobStatusBusServiceProvider::class);
+//$app->register(Imtigger\LaravelJobStatus\LaravelJobStatusBusServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------

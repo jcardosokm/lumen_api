@@ -19,6 +19,7 @@ class CreateTasksTable extends Migration
             $table->string('description');
             $table->timestamp('schedule_time');
             $table->string('uuid');
+            $table->integer('job_status_id')->nullable();
             $table->timestamps();
         });
     }
