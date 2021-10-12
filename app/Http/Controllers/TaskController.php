@@ -19,8 +19,9 @@ class TaskController extends Controller
     {
         $task = Task::where('uuid', '=', $uuid)->first();
         $jobStatus = JobStatus::find($task->job_status_id);
-        return response()->json([Task::where('uuid', '=', $uuid)->first(),$jobStatus->status], 200,);
+        return response()->json([Task::where('uuid', '=', $uuid)->first(),'status' => $jobStatus->status], 200,);
     }
+
 
     public function create(Request $request)
     {
