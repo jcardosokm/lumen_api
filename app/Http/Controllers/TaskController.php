@@ -35,7 +35,8 @@ class TaskController extends Controller
         $date = Carbon::parse($request->schedule_time);
         $now = Carbon::now();
 
-        if ($date->gt($now)) {
+        //if given date is > than now schedule at that date else delay 20 seconds
+        if ($date->lt($now)) {
             $diff = $date->diffInSeconds($now);
 
             //if date is in future delay $diff seconds 
